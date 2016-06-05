@@ -1,0 +1,417 @@
+// COLOUR REFERENCES {{{1
+
+$turquoise: #395c6b;
+$offwhite: #fcfafa;
+$lightgrey: #949494;
+$lightblue: #dee7e7;
+$greenblue: #849eac;
+$darkgrey: #383434;
+$local: #c2b7c0;
+$facebook: #3b5998;
+$local1: #8da1b0;
+$local2: #c2b7c0;
+
+
+//MIXINS {{{1
+
+@mixin fontsmooth {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+@font-face {
+    font-family: dearJoe;
+
+    src: url(../fonts/dearJoe5.otf);
+}
+
+//GLOBAL {{{1
+
+body {
+    font-family: 'Copse', serif;
+    font-size: 16px;
+
+    width: 100%;
+    padding: 0;;
+}
+
+.container{
+    padding: 0;
+    width:100%;
+}
+
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+//LAYOUT {{{1
+
+.navbar {
+    z-index: 3000;
+
+    margin-bottom: 0;
+
+    background-color: darken(#fefefe, 10%);
+}
+
+// LANDING {{{1
+
+.landing {
+    background: url(../images/tunnelview.jpeg) no-repeat center center;
+    background-size: cover;
+    .tides {
+        position: fixed;
+        z-index: 2000;
+
+        display: none;
+
+        width: 100%;
+
+        text-align: center;
+
+        background-color: transparentize($lightgrey, .2);
+        .container {
+            margin: auto;
+        }
+        img {
+            width: 20px;
+            margin-right: 10px;
+        }
+        p {
+            margin: 10px 0;
+            padding: 0;
+        }
+    }
+    #expand {
+        position: absolute;
+        top: 33%;
+        left: 25%;
+
+        width: 50%;
+        height: 10%;
+    }
+    #anchor {
+        position: absolute;
+        bottom: 0;
+        left: 40%;
+
+        display: none;
+
+        width: 25%;
+    }
+    #fadeInHeader {
+        position: absolute;
+        bottom: 0;
+
+        display: initial;
+        display: none;
+
+        width: 100%;
+    }
+    .infoLogobg {
+        font-family: dearJoe;
+        font-size: 4em;
+        font-weight: bold;
+
+        position: absolute;
+        bottom: 50px;
+        left: 40%;
+
+        display: none;
+
+        width: 20%;
+        padding: 5px;
+
+        text-align: center;
+        #clickhere {
+            width: 90%;
+        }
+    }
+}
+
+
+//OUR MAGAZINE {{{1
+
+.ourMag {
+    min-height: 100%;
+    // color: $offwhite;
+    // background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../images/stives-portrait.jpg) no-repeat center center;
+    // background-attachment: fixed;
+    // background-size: cover;
+
+    background: white;
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        .row {
+            display: flex;
+            flex-direction: row;
+
+            background-color: $offwhite;
+        }
+        .overview {
+            display: flex;
+
+            padding: 20px;
+
+            text-align: center;
+
+            align-items: center;
+            justify-content: center;
+            .alignPara {
+                width: 100%;
+                .overviewClick{
+                    width: 30%;
+                }
+            }
+            &.overview3 img {
+                display: block;
+
+                width: 250px;
+                height: 250px;
+                margin: auto;
+
+                -webkit-border-radius: 5px;
+                   -moz-border-radius: 5px;
+                        border-radius: 5px;
+
+                    -ms-border-radius: 5px;
+                     -o-border-radius: 5px;
+            }
+        }
+        .overviewpicture {
+            min-height: 415px;
+            padding: 0;
+
+            background: no-repeat center center;
+            background-size: cover;
+        }
+        .overviewpicture1 {
+            background-image: url(../images/harbourView.jpg);
+        }
+        .overviewpicture2 {
+            background-image: url(../images/stIvesStreets.jpg);
+        }
+        .overviewpicture3 {
+            background-image: url(../images/stIves-wide.jpg);
+        }
+        p {
+            font-size: 1.2em;
+
+            width: 90%;
+            margin: auto;
+        }
+
+
+        h1
+        , h2
+        , h3 {
+            font-family: dearJoe;
+
+            text-align: center;
+
+            color: $turquoise;
+            img {
+                display: inline;
+
+                width: 200px;
+            }
+            span {
+                font-size: .72em;
+
+                color: $turquoise;
+            }
+        }
+        img {
+           margin-bottom: 10px;
+        }
+    }
+}
+
+// TOOLS SECTION {{{1
+
+.tools{
+    color: $turquoise;
+    h2 {
+        font-family: dearJoe;
+
+        text-align: center;
+
+    }
+    width:100%;
+    .row{
+        width:100%;
+    }
+    .col-sm-6{
+        min-height:300px;
+        position: relative;
+        background-color: $lightblue;
+
+        .toolsdiv{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            padding: 5px;
+            text-align: center;
+            img{
+                width: 30%;
+            }
+        }
+    }
+}
+
+
+//LATEST ISSUES SECTION {{{1
+
+.issues {
+    background-color: $offwhite;
+    color: $turquoise;
+    .issuesTitle {
+        font-family: dearJoe;
+        text-align: center;
+        .col-md-4 {
+            height: 50px;
+        }
+    }
+    .issuesCol {
+        padding: 10px;
+
+        text-align: center;
+        h3 {
+            margin-bottom: 30px;
+        }
+        img {
+            max-height:200px;
+        }
+    }
+    //INDIVIDUAL ISSUES {{{2
+    #issue1 {
+    }
+    #issue2 {
+    }
+    #issue3 {
+    }
+}
+
+// FACEBOOK FEED {{{1
+
+.facebook {
+    padding: 10px;
+
+    text-align: center;
+
+    background-color: $facebook;
+    i {
+        margin-bottom: 10px;
+        padding: 3px 10px;
+
+        color: $facebook;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        background-color: $offwhite;
+
+            -ms-border-radius: 5px;
+             -o-border-radius: 5px;
+    }
+    img {
+        max-width: 100%;
+
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+
+            -ms-border-radius: 5px;
+             -o-border-radius: 5px;
+    }
+}
+
+//ADVERTISE.HTM {{{1
+.tunnel-cropped{
+    background: url(../images/tunnelviewcropped.jpg) no-repeat center center;
+    background-size: cover;
+    width:100%;
+}
+
+.advertising-text{
+    background-color: $offwhite;
+    margin: 0;
+    padding: 10px;
+    h1{
+        font-family: dearJoe;
+        color:$turquoise;
+        text-align: center;
+        margin:30px 0 30px 0;
+    }
+    figure{
+        text-align: center;
+    }
+    div{
+        text-align: center;
+    }
+    img.clickHere{
+        max-width:20%;
+        margin: 30px 0 30px 0;
+    }
+}
+
+// CONTACT.HTML {{{1
+
+
+.contactText{
+    padding: 20px 0 20px 0;
+    background-color: $offwhite;
+}
+
+.contactForm{
+    padding: 20px 0 20px 0;
+    background-color: $offwhite;
+}
+
+//FOOTER {{{1
+
+footer {
+    color: $offwhite;
+    .footerThird {
+        min-height: 200px;
+        padding-top: 30px;
+
+        border: 1px solid black;
+        background-color: $darkgrey;
+        img {
+            display: block;
+
+            width: 80%;
+            margin: auto;
+        }
+        h4
+        , address
+        , p {
+            display: block;
+
+            margin: 0 auto;
+        }
+        h4 {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+// MEDIA QUERIES {{{1
+
+@media screen and (max-width: 768px) {
+    .overviewClick {
+        width: 20%!important;
+        height:initial;
+    }
+    .overviewpicture {
+        display: none;
+    }
+    .overview {
+        width: 100%;
+        height: auto;
+    }
+}

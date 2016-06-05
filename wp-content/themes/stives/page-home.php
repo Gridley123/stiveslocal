@@ -5,6 +5,7 @@
  */
 ?>
 
+<?php get_header(); ?>
 <!-- === LANDING PAGE SECTION {{{2 === -->
       <div class="landing">
         <div class="tides">
@@ -31,5 +32,4 @@
         id="infoLogo"> --> <img id="clickhere" alt="anchor Click Here logo"
             src="<?php bloginfo('stylesheet_directory'); ?>/images/anchor-logo-clickhere-contact.png" ></div>
       </div>
-<?php get_header(); ?>
 <?php get_footer(); ?>

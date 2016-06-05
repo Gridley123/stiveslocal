@@ -13,6 +13,12 @@
 		<?php wp_head() ?>
     </head>
     <body <?php body_class() ?>>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+<?php if (is_page_template('page-home')): ?>
+    <?php get_template_part('content', 'landingbig'); ?>
+<?php endif; ?>
   <!-- === HEADER SECTION (BRAND, NAVBAR) {{{2 === -->
 
       <header class="site-header" role="banner">

@@ -7549,123 +7549,326 @@ button.close {
     display: none !important;
   }
 }
-/* ==========================================================================
-	Base
-/* ========================================================================== */
-html {
-  height: 100%;
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+@font-face {
+  font-family: dearJoe;
+  src: url(../fonts/dearJoe5.otf);
 }
-
-html,
-button,
-input,
-select,
-textarea {
-  font-family: Arial, sans-serif;
-  color: #444;
-}
-
 body {
-  height: 100%;
+  font-family: 'Copse', serif;
+  font-size: 16px;
+  width: 100%;
+  padding: 0;
+}
+
+.container {
+  padding: 0;
+  width: 100%;
+}
+
+.row {
   margin: 0;
-  font-size: 1em;
-  line-height: 1.4;
-  background: #e1e1e1;
+  padding: 0;
 }
 
-/*	Apply to all elements. In a responsive design, this is almost always a good idea */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.navbar {
+  z-index: 3000;
+  margin-bottom: 0;
+  background-color: #e5e5e5;
 }
 
-/* ==========================================================================
-	Links
-/* ========================================================================== */
-a {
-  color: #26527c;
-  text-decoration: underline;
+.landing {
+  background: url(../images/tunnelview.jpeg) no-repeat center center;
+  background-size: cover;
+}
+.landing .tides {
+  position: fixed;
+  z-index: 2000;
+  display: none;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(148, 148, 148, 0.8);
+}
+.landing .tides .container {
+  margin: auto;
+}
+.landing .tides img {
+  width: 20px;
+  margin-right: 10px;
+}
+.landing .tides p {
+  margin: 10px 0;
+  padding: 0;
+}
+.landing #expand {
+  position: absolute;
+  top: 33%;
+  left: 25%;
+  width: 50%;
+  height: 10%;
+}
+.landing #anchor {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  display: none;
+  width: 25%;
+}
+.landing #fadeInHeader {
+  position: absolute;
+  bottom: 0;
+  display: initial;
+  display: none;
+  width: 100%;
+}
+.landing .infoLogobg {
+  font-family: dearJoe;
+  font-size: 4em;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
+  display: none;
+  width: 20%;
+  padding: 5px;
+  text-align: center;
+}
+.landing .infoLogobg #clickhere {
+  width: 90%;
 }
 
-a:focus,
-a:hover {
-  color: #08111a;
+.ourMag {
+  min-height: 100%;
+  background: white;
+}
+.ourMag .container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.ourMag .container .row {
+  display: flex;
+  flex-direction: row;
+  background-color: #fcfafa;
+}
+.ourMag .container .overview {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.ourMag .container .overview .alignPara {
+  width: 100%;
+}
+.ourMag .container .overview .alignPara .overviewClick {
+  width: 30%;
+}
+.ourMag .container .overview.overview3 img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.ourMag .container .overviewpicture {
+  min-height: 415px;
+  padding: 0;
+  background: no-repeat center center;
+  background-size: cover;
+}
+.ourMag .container .overviewpicture1 {
+  background-image: url(../images/harbourView.jpg);
+}
+.ourMag .container .overviewpicture2 {
+  background-image: url(../images/stIvesStreets.jpg);
+}
+.ourMag .container .overviewpicture3 {
+  background-image: url(../images/stIves-wide.jpg);
+}
+.ourMag .container p {
+  font-size: 1.2em;
+  width: 90%;
+  margin: auto;
+}
+.ourMag .container h1
+, .ourMag .container h2
+, .ourMag .container h3 {
+  font-family: dearJoe;
+  text-align: center;
+  color: #395c6b;
+}
+.ourMag .container h1
+img, .ourMag .container h2
+img, .ourMag .container h3 img {
+  display: inline;
+  width: 200px;
+}
+.ourMag .container h1
+span, .ourMag .container h2
+span, .ourMag .container h3 span {
+  font-size: .72em;
+  color: #395c6b;
+}
+.ourMag .container img {
+  margin-bottom: 10px;
 }
 
-a:focus {
-  outline: thin dotted;
+.tools {
+  color: #395c6b;
+  width: 100%;
+}
+.tools h2 {
+  font-family: dearJoe;
+  text-align: center;
+}
+.tools .row {
+  width: 100%;
+}
+.tools .col-sm-6 {
+  min-height: 300px;
+  position: relative;
+  background-color: #dee7e7;
+}
+.tools .col-sm-6 .toolsdiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  text-align: center;
+}
+.tools .col-sm-6 .toolsdiv img {
+  width: 30%;
 }
 
-a:active,
-a:hover {
-  outline: 0;
+.issues {
+  background-color: #fcfafa;
+  color: #395c6b;
+}
+.issues .issuesTitle {
+  font-family: dearJoe;
+  text-align: center;
+}
+.issues .issuesTitle .col-md-4 {
+  height: 50px;
+}
+.issues .issuesCol {
+  padding: 10px;
+  text-align: center;
+}
+.issues .issuesCol h3 {
+  margin-bottom: 30px;
+}
+.issues .issuesCol img {
+  max-height: 200px;
 }
 
-/* ==========================================================================
-	Typography
-/* ========================================================================== */
-/* Headers */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1em;
-  line-height: 1.5em;
+.facebook {
+  padding: 10px;
+  text-align: center;
+  background-color: #3b5998;
+}
+.facebook i {
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  color: #3b5998;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fcfafa;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.facebook img {
+  max-width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
-h1 {
-  font-size: 2em;
+.tunnel-cropped {
+  background: url(../images/tunnelviewcropped.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
 }
 
-h2 {
-  font-size: 1.5em;
+.advertising-text {
+  background-color: #fcfafa;
+  margin: 0;
+  padding: 10px;
+}
+.advertising-text h1 {
+  font-family: dearJoe;
+  color: #395c6b;
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+.advertising-text figure {
+  text-align: center;
+}
+.advertising-text div {
+  text-align: center;
+}
+.advertising-text img.clickHere {
+  max-width: 20%;
+  margin: 30px 0 30px 0;
 }
 
-h3 {
-  font-size: 1.3em;
+.contactText {
+  padding: 20px 0 20px 0;
+  background-color: #fcfafa;
 }
 
-h4 {
-  font-size: 1.3em;
-  font-weight: normal;
+.contactForm {
+  padding: 20px 0 20px 0;
+  background-color: #fcfafa;
 }
 
-h5, h6 {
-  font-size: 1.1em;
+footer {
+  color: #fcfafa;
+}
+footer .footerThird {
+  min-height: 200px;
+  padding-top: 30px;
+  border: 1px solid black;
+  background-color: #383434;
+}
+footer .footerThird img {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+footer .footerThird h4
+, footer .footerThird address
+, footer .footerThird p {
+  display: block;
+  margin: 0 auto;
+}
+footer .footerThird h4 {
+  margin-bottom: 5px;
 }
 
-/* Content Block Elements */
-dl,
-menu,
-ol,
-ul,
-p,
-pre {
-  margin: 0 0 1em;
-}
+@media screen and (max-width: 768px) {
+  .overviewClick {
+    width: 20% !important;
+    height: initial;
+  }
 
-/* Paragraphs */
-/* Lists */
-menu,
-ol,
-ul {
-  padding: 0 0 0 2em;
-}
+  .overviewpicture {
+    display: none;
+  }
 
-/* Selection Colors */
-::-moz-selection {
-  background: #444;
-  color: #fff;
-  text-shadow: none;
+  .overview {
+    width: 100%;
+    height: auto;
+  }
 }
-
-::selection {
-  background: #444;
-  color: #fff;
-  text-shadow: none;
-}
-
 /* =============================================================================
 	Helper Classes
 /* ========================================================================== */
@@ -7771,7 +7974,6 @@ input.button {
 
 /* Content */
 #content-wrap {
-  padding: 1em;
   background: #fff;
 }
 
