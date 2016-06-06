@@ -16,31 +16,13 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-<?php if (is_page_template('page-home')): ?>
-    <?php get_template_part('content', 'landingbig'); ?>
-<?php endif; ?>
-  <!-- === HEADER SECTION (BRAND, NAVBAR) {{{2 === -->
 
-      <header class="site-header" role="banner">
+<?php 
+    if (is_page('Home')){
+        get_template_part('content', 'landingbig');
+    } else {
+        get_template_part('content', 'landingsmall');
+    }
+    get_template_part('content', 'navbar');
+?>
 
-        <nav class="navbar navbar-default" role="navigation">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-          </div>
-
-        <?php wp_nav_menu(array(
-                'theme_location' => 'main-nav',
-                'container'      => 'div',
-                'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
-                'menu_class' => 'nav navbar-nav',
-        )) ?>
-
-      </header>
-		<div id="content-wrap">
