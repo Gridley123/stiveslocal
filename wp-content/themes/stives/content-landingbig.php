@@ -1,4 +1,6 @@
-
+<?php
+    get_template_part('tideinfo');
+?>
 <!-- === LANDING PAGE SECTION {{{2 === -->
       <div class="landing">
         <div class="tides">
