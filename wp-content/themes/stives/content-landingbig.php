@@ -9,11 +9,7 @@
               <p>
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/anchor-logo.svg" alt="ANCHOR" id="brand">
                 <span>TIDES</span>
-                <span><i class="fa fa-arrow-up"></i></span>
-                <span class="hightide1">12:06</span>
-                <span class="hightide2"></span>
-                <i class="fa fa-arrow-down"></i>
-                <span class="lowtide1">06:01 </span><span class="lowtide2">| 18:44</span>
+                <?php echo $GLOBALS['output']; ?>
               </p>
             </div><!-- /.tidedata -->
           </div>

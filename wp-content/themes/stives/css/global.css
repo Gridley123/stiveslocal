@@ -10459,7 +10459,10 @@ body {
 }
 .landing .tides p {
   margin: 10px 0;
-  padding: 0;
+  padding: 0 10px 0 10px;
+}
+.landing .tides .tideextreme {
+  padding: 0 13px 0 13px;
 }
 .landing #expand {
   position: absolute;

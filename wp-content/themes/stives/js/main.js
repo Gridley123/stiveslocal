@@ -88,7 +88,7 @@ $(document).ready(function() { $(window).resize(function() {
         setSizes();
         console.log('resize');
     });
-    if((window.location.pathname =='/index.html')||(window.location.pathname=='/')){
+    if((window.location.pathname =='/stivesnew/')||(window.location.pathname =='/index.html')||(window.location.pathname=='/')){
         navFix();
         console.log('index');
     }
