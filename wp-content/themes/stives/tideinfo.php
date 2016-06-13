@@ -11,9 +11,8 @@
         if ($expired_times_array){
             refreshCache();
         } else {
-            
-            $output_json = encode_output_json();
-            print_r($output_json);
+            outputData(2, 'height');
+            refineData(extractExtremes(getCache()));
         }
     } else {
         refreshCache();
@@ -66,5 +65,47 @@
       return json_encode(extractExtremes(getCache()));
     }
 
+    function outputData($index, $key) {
+        $decoded = extractExtremes(getCache());
+        if ($decoded) {
+            if ($decoded[$index]) {
+                echo $decoded[$index]->$key;
+            }
+        }
+    }
+    xml();
+    
+    function xml() {
+        $xml = simplexml_load_file("https://www.tidetimes.org.uk/st-ives-tide-times.rss");
+        print('xml: '. var_dump($xml));
+    }
+    
+    function refineData($extremesarray) {
+        print(var_dump($extremesarray));
+        foreach ($extremesarray as &$object) {
+            foreach($object as $key=>&$value){
+                switch ($key) {
+                    case "dt":
+                        $value = date('H:i', $value);
+                        print 'dt';
+                        break;
+                    case "height":
+                        $value = round($value, 2);
+                        break;
+                    case "type":
+                        if($value == "High"){
+                            $value = "fa-arrow-up";
+                        } else {
+                            $value = "fa-arrow-down";
+                        } 
+                        break;
+                }
+            }
+            
+        }
+        
+        print(var_dump($extremesarray));
+
+    }
 
 ?>

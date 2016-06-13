@@ -1,5 +1,5 @@
 <?php
-    get_template_part('tideinfo');
+    get_template_part('tiderss');
 ?>
 <!-- === LANDING PAGE SECTION {{{2 === -->
       <div class="landing">
