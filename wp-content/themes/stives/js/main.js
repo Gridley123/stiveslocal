@@ -6,6 +6,33 @@ function sizeSet(div,percentage) {
     $(div).height(percentage * $(window).height());
 
 }
+function hasCodeRunToday(){
+    console.log('hasCodeRunToday');
+    if (typeof(Storage)!== "undefined"){
+        
+    console.log('Has web storage');
+        var date = new Date().getDate();
+        console.log(date);
+        if (localStorage.getItem("hasCodeRunToday")){
+            console.log('Storage has item');
+            console.log(localStorage.getItem('hasCodeRunToday'));
+            if (localStorage.getItem("hasCodeRunToday")!=date){
+                console.log('Storage does not equal todays date');
+               logofadeIn();    
+               localStorage.setItem("hasCodeRunToday", date);
+            } else {
+                console.log("Storage equals todays date");
+                noAnimation();
+                localStorage.setItem('hasCodeRunToday', date);
+            }
+        } else {
+            logofadeIn();
+            localStorage.setItem('hasCodeRunToday', date);
+        }
+    } else {
+    logofadeIn();
+    }
+}
 function headerfadeIn() {
     $('#anchor').animate({
         width: '9%',
@@ -20,6 +47,16 @@ function logofadeIn() {
     $('#anchor').delay(1000).fadeIn(3000, function() {
         headerfadeIn();
     });
+}
+
+function noAnimation(){
+    
+    $('#anchor').animate({
+        width: '9%',
+        bottom: 0,
+        left: '69.5%'
+    }, 0).show();
+    $('#fadeInHeader, .infoLogobg, .tides').show();
 }
 
 function scrollNumber() {
@@ -96,6 +133,6 @@ $(document).ready(function() { $(window).resize(function() {
         adPageNavFix();
         console.log('advert');
     }
-    logofadeIn();
+    hasCodeRunToday();
 });
 });

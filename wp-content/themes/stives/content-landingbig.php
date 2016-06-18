@@ -1,6 +1,3 @@
-<?php
-    get_template_part('tiderss');
-?>
 <!-- === LANDING PAGE SECTION {{{2 === -->
       <div class="landing">
         <div class="tides">
@@ -9,7 +6,7 @@
               <p>
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/anchor-logo.svg" alt="ANCHOR" id="brand">
                 <span>TIDES</span>
-                <?php echo $GLOBALS['output']; ?>
+                <?php createTideBar(); ?>
               </p>
             </div><!-- /.tidedata -->
           </div>
