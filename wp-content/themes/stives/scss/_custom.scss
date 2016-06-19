@@ -289,6 +289,12 @@ body {
         img {
             max-height:200px;
         }
+        .issuuEmbed{
+            text-align:center;
+            div{
+                margin: auto;
+            }
+        }
     }
     //INDIVIDUAL ISSUES {{{2
     #issue1 {
@@ -339,6 +345,9 @@ body {
     .rfbp-heading{
         color: $facebook;
         font-family: helvetica, arial, sans-serif;
+    }
+    ._2p3a{
+        border-radius: 7px;
     }
 }
 

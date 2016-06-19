@@ -10631,6 +10631,12 @@ span, .ourMag .container h3 span {
 .issues .issuesCol img {
   max-height: 200px;
 }
+.issues .issuesCol .issuuEmbed {
+  text-align: center;
+}
+.issues .issuesCol .issuuEmbed div {
+  margin: auto;
+}
 
 .facebook {
   padding: 20px;
@@ -10667,6 +10673,9 @@ span, .ourMag .container h3 span {
 .facebook .rfbp-heading {
   color: #3b5998;
   font-family: helvetica, arial, sans-serif;
+}
+.facebook ._2p3a {
+  border-radius: 7px;
 }
 
 .tunnel-cropped {

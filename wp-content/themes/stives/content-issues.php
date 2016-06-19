@@ -14,7 +14,8 @@
               <div class="col-xs-4 issuesCol" id="issue1">
                 <h3>Sep/Oct 2015</h3>
                 <div class="issuuEmbed">
-                  <img src="<?php bloginfo('stylesheet_directory'); ?>/images/front_cover_sep_oct.png" alt="">
+                    <div data-configid="18888859/35314565" style="width:300px; height:213px;" class="issuuembed"></div>
+                    <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
                 </div>
               </div> <!-- ./col -->
               <div class="col-xs-4 issuesCol" id="issue2">
