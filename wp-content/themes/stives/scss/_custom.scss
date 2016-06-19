@@ -302,12 +302,13 @@ body {
 // FACEBOOK FEED {{{1
 
 .facebook {
-    padding: 10px;
-
-    text-align: center;
-
+    padding: 20px;
     background-color: $facebook;
+    .icon{
+        text-align:center;
+    }
     i {
+        margin:auto;
         margin-bottom: 10px;
         padding: 3px 10px;
 
@@ -320,7 +321,7 @@ body {
             -ms-border-radius: 5px;
              -o-border-radius: 5px;
     }
-    img {
+    .facebook-feed {
         max-width: 100%;
 
         -webkit-border-radius: 5px;
@@ -329,6 +330,15 @@ body {
 
             -ms-border-radius: 5px;
              -o-border-radius: 5px;
+    }
+    .rfbp-post{
+        background-color: white;
+        padding: 10px;
+        border-radius:7px;
+    }
+    .rfbp-heading{
+        color: $facebook;
+        font-family: helvetica, arial, sans-serif;
     }
 }
 
